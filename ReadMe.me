@@ -1,0 +1,191 @@
+ Hospital Baca Ortiz – Sistema Hospitalario
+
+Go (Backend) + React (Frontend)
+
+Sistema hospitalario desarrollado como proyecto académico para el Hospital Baca Ortiz, orientado a la gestión integral de información médica mediante una arquitectura moderna, modular y basada en Programación Orientada a Objetos en Go.
+
+Descripción General
+
+Este proyecto implementa un sistema hospitalario que permite administrar entidades clínicas como médicos, pacientes, citas, consultas, medicamentos, salas, hospitalizaciones y más.
+
+El sistema está compuesto por:
+
+Backend: API REST desarrollada en Go usando Gin y GORM
+
+Frontend: Panel administrativo en React + Vite + Tailwind CSS
+
+Autenticación: JWT con middleware de autorización
+
+Arquitectura: Modular, orientada a objetos y escalable
+
+Proyecto enfocado en aplicar correctamente los conceptos vistos en el curso de Programación Orientada a Objetos (Go).
+
+Objetivos del Proyecto
+
+Aplicar POO en Go usando structs, interfaces y composición
+
+Implementar una API REST profesional y organizada
+
+Separar responsabilidades mediante arquitectura por capas
+
+Integrar frontend y backend de forma desacoplada
+
+Simular un sistema real para un entorno hospitalario
+
+Arquitectura del Sistema
+Backend (Go)
+
+Arquitectura basada en capas:
+
+Handler: Manejo de HTTP (controladores)
+
+Service: Lógica de negocio
+
+Repository: Acceso a datos (GORM)
+
+Model: Structs del dominio
+
+Middleware: Autenticación y roles
+
+Routes: Registro centralizado de endpoints
+
+Frontend (React)
+
+Vite como bundler
+
+React Router para navegación
+
+Tailwind CSS para estilos
+
+Panel administrativo con sidebar y vistas protegidas
+
+Estructura del Proyecto
+Hospital-Baco-Ortiz-GO/
+│
+├── hospital-backend/
+│   ├── cmd/api/
+│   ├── routes/
+│   ├── middleware/
+│   ├── medico/
+│   ├── paciente/
+│   ├── cita/
+│   ├── consulta/
+│   ├── medicamento/
+│   ├── sala/
+│   ├── usuario/
+│   ├── usuario_rol/
+│   ├── internal/
+│   ├── go.mod
+│   └── .env (ignorado)
+│
+├── hospital-frontend/
+│   ├── src/
+│   │   ├── pages/dashboard/
+│   │   ├── components/
+│   │   ├── routes/
+│   │   └── services/
+│   ├── index.html
+│   └── package.json
+│
+├── .gitignore
+└── README.md
+
+Autenticación y Seguridad
+
+Login mediante endpoint /api/auth/login
+
+JWT para sesiones
+
+Middleware de autenticación
+
+Protección de rutas privadas
+
+Separación de roles (administrativo)
+
+Diseño Orientado a Objetos en Go
+
+Structs como modelos principales
+
+Interfaces para desacoplar lógica
+
+Composición sobre herencia
+
+Encapsulación con campos exportados/no exportados
+
+Polimorfismo mediante interfaces de servicio y repositorio
+
+Tecnologías Utilizadas
+Backend
+
+Go
+
+Gin
+
+GORM
+
+JWT
+
+MySQL / SQL Server (según configuración)
+
+Dotenv
+
+Frontend
+
+React
+
+Vite
+
+Tailwind CSS
+
+React Router
+
+Cómo Ejecutar el Proyecto
+Backend
+cd hospital-backend
+go mod tidy
+go run cmd/api/main.go
+
+
+Servidor en: http://localhost:8080
+
+Frontend
+cd hospital-frontend
+npm install
+npm run dev
+
+
+Aplicación en: http://localhost:5173
+
+Variables de Entorno (.env)
+
+Ejemplo:
+
+DB_HOST=localhost
+DB_PORT=3306
+DB_USER=root
+DB_PASSWORD=****
+DB_NAME=hospital
+JWT_SECRET=clave_secreta
+
+Estado del Proyecto
+
+Backend funcional
+
+Frontend operativo
+
+Autenticación implementada
+
+En desarrollo continuo (extensible)
+
+Contexto Académico
+
+Proyecto desarrollado para la asignatura:
+
+Programación Orientada a Objetos (Go)
+Enfocado en buenas prácticas, diseño modular y arquitectura limpia.
+
+Autor
+
+Diego Ruiz
+Proyecto académico – Universidad
+Sistema Hospitalario Baca Ortiz

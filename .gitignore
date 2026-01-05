@@ -1,0 +1,19 @@
+# --- GO ---
+hospital-backend/bin/
+hospital-backend/tmp/
+hospital-backend/.env
+
+# --- NODE / FRONTEND ---
+hospital-frontend/node_modules/
+hospital-frontend/dist/
+
+# --- VITE ---
+*.local
+
+# --- IDE ---
+.vscode/
+.idea/
+
+# --- SISTEMA ---
+.DS_Store
+Thumbs.db
